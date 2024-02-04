@@ -2,6 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
+from load_data import load_data
 
 # 生成一个简单的时间序列数据
 def generate_time_series(n):
@@ -29,6 +30,11 @@ def create_sequences(data, window_size):
 
 window_size = 10
 X, y = create_sequences(time_series, window_size)
+print('x,y x')
+print(X)
+
+print('x,y y')
+print(y)
 
 # 划分训练集和测试集
 train_size = int(0.8 * len(X))

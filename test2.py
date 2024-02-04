@@ -2,6 +2,8 @@ import numpy as np
 import tensorflow as tf
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
+from load_data import load_data
+
 
 # 生成模拟数据
 np.random.seed(42)

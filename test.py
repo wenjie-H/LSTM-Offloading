@@ -9,6 +9,9 @@ def generate_time_series(n):
     data = np.sin(0.1 * time) + 0.1 * np.random.randn(n)
     return data
 
+data_input = [-492.6388768, -332.7269292, -328.3937871, -324.060645, -319.7275029, -315.3943608, -311.0612187, -306.7280766, -302.3949344, -298.0617923, -293.7286502]
+
+
 # 准备数据
 n = 1000
 time_series = generate_time_series(n)

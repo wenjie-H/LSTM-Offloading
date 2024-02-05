@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense
 from load_data import load_data
+import pickle
+
 
 # 生成一个简单的时间序列数据
 def generate_time_series(n):
@@ -26,7 +28,7 @@ def LSTM_predict(x_num):
     # 准备数据
     time_series = load_data()
 
-    window_size = 10
+    window_size = 6
     X, y = create_sequences(time_series, window_size)
     # print(X, y)
 
@@ -49,7 +51,7 @@ def LSTM_predict(x_num):
     print('X_test', X_test)
     print(len(X_test))
     # 在测试集上进行预测
-    y_pred = model.predict(X_test)
+    y_pred = model.predict(np.array([[79.6, 79.6, 79.6, 79.6, 79.6, 79.6]]))
 
     print(y_pred)
 

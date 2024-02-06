@@ -101,6 +101,6 @@ def LSTM_apply(data):
     return result
 
 # LSTM_train()
-LSTM_apply(np.array([[71, 72, 73, 74, 75, 76]]))
+# LSTM_apply(np.array([[-20, -20, -10, -10, -10, -10]]))
 
 
